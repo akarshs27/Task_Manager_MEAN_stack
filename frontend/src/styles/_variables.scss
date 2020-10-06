@@ -1,0 +1,32 @@
+
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+);
+
+$colors: (
+  white: #fff,
+  black: #000,
+  text: #fafafa,
+  dark: #2b2b2b,
+  error: #DE5454,
+  success: #32bb8a,
+  warning: #ff9841,
+  header: #3F51B5,
+  cross: #9A9A9A,
+  turquoise: #44ddd0,
+  green: #27d7a1,
+  bg-list: #f9f7f7,
+  bg-list2: #f8f8f8,
+  gradientHeading: linear-gradient(to right, #4ac29a, #bdfff3),
+);
+
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name );
+}
+
+@function color($color) {
+  @return map-get($colors, $color);
+}

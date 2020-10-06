@@ -1,0 +1,13 @@
+<div class="box-section">
+    <div class="modal-container">
+      <h2>Edit Task</h2>
+        <input #updatetaskname class="form-control" type="text" name="task" placeholder="Enter new task"/>
+        <br>
+        <br>
+        <div class="button-group">
+          <button matRipple class="clear-button" type="button" routerLink="/">Clear</button>
+          <button matRipple (click)="editTask(updatetaskname.value)">Save</button>
+        </div>
+    </div>
+  </div>
+

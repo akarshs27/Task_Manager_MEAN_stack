@@ -1,0 +1,52 @@
+<div class="box-section">
+  <div class="box-container">
+
+      <div class="sidebar-container">
+          <h2>Lists</h2>
+          <div class="list-menu-item">
+            <a matRipple class="list-item" *ngFor="let list of lists" routerLinkActive="active-item" [routerLink]="['/lists', list._id]">
+              <p>{{ list.title }}</p>
+            </a>
+          </div>
+          <button matRipple class="newlist-button" type="button" routerLink="/newlist">+ NEW LIST</button>
+      </div>
+
+      <div class="list-container">
+        <div *ngIf="tasks">
+          <div class="task-header">
+              <h2>Tasks</h2>
+              <div class="drop-menu">
+                  <button class="settings-button" mat-button [matMenuTriggerFor]="menu"><mat-icon>settings</mat-icon></button>
+                  <mat-menu #menu="matMenu" xPosition="before">
+                    <button [routerLink]="['/edit-list', selectedList]" mat-menu-item>Edit</button>
+                    <button (click)="onDeleteListClick()" mat-menu-item>Delete</button>
+                  </mat-menu>
+              </div>
+
+          </div>
+            <div matRipple class="task" *ngFor="let task of tasks" (click)="onTaskClick(task)"
+                  [ngClass]= "{ 'complete': task.completed }" >
+                  <div class="task-text">
+                      <p>{{ task.title }}</p>
+                  </div>
+                  <div class="button-group">
+                    <button class="icon-button" [routerLink]="['/lists', selectedList, 'edit-task', task._id]">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button class="icon-button" (click)="onDeleteTask(task._id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+
+                  </div>
+
+            </div>
+            <button routerLink="./new-task" matRipple class="add-task-button" type="button"></button>
+        </div>
+        <!-- {{tasks | json}} -->
+        <div *ngIf="!tasks">
+          <div class="no-task"></div>
+        </div>
+      </div>
+
+  </div>
+</div>

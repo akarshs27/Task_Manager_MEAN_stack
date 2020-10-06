@@ -1,0 +1,91 @@
+
+@import './material';
+@import './mixins';
+@import './variables';
+
+button {
+  color: color(white);
+  background-color: darken(color(turquoise), 10%);
+  padding: 0.6rem 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+  margin-right: 0.5rem;
+}
+
+.clear-button {
+  color: color(turquoise);
+  background-color: color(white);
+  border: 2px solid color(turquoise);
+}
+
+h2 {
+  text-transform: uppercase;
+  color: darken(color(turquoise), 10%);
+  letter-spacing: 1px !important;
+}
+
+p {
+  margin: 0;
+}
+
+.box-section {
+  height: 100%;
+  width: 100%;
+  @include flexCenter;
+}
+
+input {
+  width: 100%;
+  max-width: 25.5rem;
+  padding: 0.7rem;
+  background-color: color(bg-list);
+  border: none;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0px 0px 2px 2px rgba(68, 221, 208, 0.5)
+  }
+}
+
+a {
+    text-decoration: none;
+    color: color(dark);
+}
+
+.modal-container, .login-container {
+  max-height: 11.2rem;
+  max-width: 27rem;
+  background: color(white);
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.modal-container {
+  max-height: 13rem;
+  padding: 2rem;
+}
+
+.login-container {
+  max-height: 15.5rem;
+  max-width: 24rem;
+  padding: 2rem 3rem;
+
+  input {
+    margin-bottom: 1rem;
+  }
+
+  button {
+    margin-right: 0;
+  }
+}
+
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+}
+

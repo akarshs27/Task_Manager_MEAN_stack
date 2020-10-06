@@ -1,0 +1,12 @@
+<div class="box-section">
+  <div class="modal-container">
+    <h2>Create a new List</h2>
+      <input #newlistname class="form-control" type="text" name="list" placeholder="Enter new list"/>
+      <br>
+      <br>
+      <div class="button-group">
+        <button matRipple class="clear-button" type="button" routerLink="/">Clear</button>
+        <button matRipple (click)="createNewList(newlistname.value)">Create</button>
+      </div>
+  </div>
+</div>

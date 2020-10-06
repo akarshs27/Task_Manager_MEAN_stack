@@ -1,0 +1,12 @@
+<div class="box-section">
+    <div class="modal-container">
+      <h2>Edit a List</h2>
+        <input #newlistname class="form-control" type="text" name="list" placeholder="Enter new list"/>
+        <br>
+        <br>
+        <div class="button-group">
+          <button matRipple class="clear-button" type="button" routerLink="/">Clear</button>
+          <button matRipple (click)="editList(newlistname.value)">Save</button>
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,19 @@
+<div class="box-section">
+    <div class="login-container">
+      <h2>Sign Up</h2>
+      <form>
+        <div class="form-field">
+          <input #emailInput class="form-control" type="text" placeholder="Email" name="email" />
+        </div>
+        <div class="form-field">
+          <input #passwordInput class="form-control" type="text" placeholder="Password" name="password" />
+        </div>
+        <div class="button-group">
+            <button type="button" class="login-button" routerLink="/login">Login</button>
+          <button type="button" (click)="onSignUpButtonClick(emailInput.value, passwordInput.value)">Sign Up</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
