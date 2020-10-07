@@ -4,6 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+### For middleware
+Run `npm install` in the backend folder.
+Then `node app.js`.
+
+### For frontend
+Run `npm install` in the frontend folder.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
